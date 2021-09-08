@@ -1,4 +1,4 @@
-name: Deploying Expense Tracker to Surge
+name: Deploying react app to surge
 
 on:
   push:
