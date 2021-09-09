@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import counterContext from './counterContext';
 
 ReactDOM.render(
+  <counterContext.Provider>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  actDOM.render(
+ </counterContext.Provider>,
   document.getElementById('root')
 );
 
