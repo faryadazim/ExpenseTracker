@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './App.css';
-
+import Reset from './React.js'
 function App() {
 
   const [state, setstate] = useState(0)
@@ -13,6 +13,8 @@ function App() {
         <span>
           {state}
         </span>
+        <br />
+        <Reset   state={state} setstate={setstate}/>
         <br />
         <button onClick={() => { setstate(state + 1) }}>Increase</button>
       </header>
