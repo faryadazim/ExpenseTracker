@@ -4,9 +4,11 @@ import Reset from './React.js'
 function App() {
 
   const [state, setstate] = useState(0)
+  const [isMorning, setisMorning] = useState(true)
   return (
     <div className="App">
-      <header className="App-header">
+      <header className={  ` lalanntop ${isMorning ? 'App-Day':'App-Night'}`}>
+        <button onClick={() =>{setisMorning(!isMorning)}}> Time</button>
         <button onClick={() => {
           if (state === 0) {  console.log("Decrease");  } else { setstate(state - 1)  } }}>Decrease</button>
         <br />
@@ -15,7 +17,7 @@ function App() {
         </span>
         <br />
         <Reset   state={state} setstate={setstate}/>
-        <br />
+      
         <button onClick={() => { setstate(state + 1) }}>Increase</button>
       </header>
     </div>
