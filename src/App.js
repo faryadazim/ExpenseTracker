@@ -4,7 +4,7 @@ import Reset from './React.js'
 function App() {
 
   const [state, setstate] = useState(0)
-  const [isMorning, setisMorning] = useState(true)
+  const [isMorning, setisMorning] = useState(false)
   return (
     <div className="App">
       <header className={  ` lalanntop ${isMorning ? 'App-Day':'App-Night'}`}>
