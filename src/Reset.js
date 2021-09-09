@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import counterContext from './counterContext'
 const Reset = ({setstate,state}) => {
     let counterValue=useContext(counterContext)
-    console.log(counterValue);
+    console.log("counterValue");
     return (
         
         <div>

@@ -1,6 +1,9 @@
 import React from 'react'
-
-const Reset = ({setstate,state}) => {
+import { useContext } from 'react'
+import counterContext from './counterContext' 
+const Reset = ({setstate}) => {
+    let counterValue=useContext(counterContext)
+    console.log(counterValue.name);
     return (
         <div>
          <button onClick={() => { setstate(0) }}>Reset Value</button>   
