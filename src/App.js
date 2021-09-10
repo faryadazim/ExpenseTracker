@@ -1,27 +1,29 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import './App.css';
 import Reset from './React.js'
+import counterContext  from "./counterContext";
 function App() {
-  
-  const [state, setstate] = useState(0)
+
+  const count = useContext(counterContext)
   const [isMorning, setisMorning] = useState(false)
   return (
     <div className="App">
-      <header className={  ` lalanntop ${isMorning ?  'App-Day':'App-Night'}`}>
-        <button onClick={() =>{setisMorning(!isMorning)}}> Time</button>
+      <header className={` lalanntop ${isMorning ? 'App-Day' : 'App-Night'}`}>
+        <button onClick={() => { setisMorning(!isMorning) }}> Time</button>
         <button onClick={() => {
-          if (state === 0) {  console.log("Decrease");  } else { setstate(state - 1)  } }}>Decrease</button>
+          if (count[0] === 0) { console.log("Decrease"); } else { count[1](count[0] - 1) }
+        }}>Decrease</button>
         <br />{
-            isMorning? <h1 style={ {color:"grey"}}> Teeto patia na kr</h1>: <h1> Masti kr rya hn</h1>
-          }
+          isMorning ? <h1 style={{ color: "grey" }}> Teeto patia na kr</h1> : <h1> Masti kr rya hn</h1>
+        }
         <span>
-          
-          {state}
+
+          {count[0]}
         </span>
         <br />
-        <Reset   state={state} setstate={setstate}/>
-      
-        <button onClick={() => { setstate(state + 1) }}>Increase</button>
+        <Reset />
+
+        <button onClick={() => { count[1](count[0] + 1) }}>Increase</button>
       </header>
     </div>
   );
