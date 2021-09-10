@@ -33,7 +33,7 @@ html {
   max-width: 400px; 
   border: 1px solid #3a3c42;
   
-  box-shadow: 0.3px 0.3px 4px 0.3px #494b52;;
+  /* box-shadow: 0.3px 0.3px 4px 0.3px #494b52; */
 }
 .header h2{
   margin-top: -2px;
@@ -66,8 +66,21 @@ align-items: center;
 border: 1px solid #4c4f57;
 height: 55px;
 width: 220px; 
+display: flex;
+align-items: center;
+justify-content: end;
 font-size: 20px;
+border-bottom-right-radius: 4px;
+border-top-right-radius: 4px;
 
+}
+.income-balance{
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 4px !important;
+border-top-right-radius: 0px !important;
+border-top-left-radius: 4px !important;
+  border-right:none !important;
+justify-content: start !important; 
 }
 .history-section h4{
   text-align: center; 
@@ -79,7 +92,7 @@ font-size: 22px;
 
 }
 .scrol-here{
-  height: 175px;
+  height: 165px;
   margin: 5px 10px;
   overflow-y:scroll;
 padding: auto 0px !important;
@@ -89,7 +102,7 @@ padding-left:   0px !important;
   display: flex;
 list-style: none;
 margin: 6px 8px;
-font-size: 16px;
+font-size: 14px;
 cursor: pointer;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 /* transition: all 1s ease !important; */
@@ -98,7 +111,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 .history-list{
   
   width: 100%;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: flex;
 justify-content: space-between;
 }
@@ -151,10 +164,14 @@ label{
   font-size: 16px;
 }
 input{
-height: 28px;
+/* height: 28px; */
 border-radius: 4px !important;
 border: none;
 outline: none;
 
 
+}
+.btn-outline-secondary {
+  color: silver;
+  border-color: #4c4f57;
 }
