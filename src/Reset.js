@@ -1,13 +1,12 @@
-import React from 'react'
-import { useContext } from 'react'
-import counterContext from './counterContext'
-const Reset = ({setstate,state}) => {
-    let counterValue=useContext(counterContext)
-    console.log("counterValue");
+import { useReducer } from "react"
+import React  from 'react' 
+import counterReducer from "./counterReducer"
+const Reset = () => {
+    const [state, dispatch] = useReducer(counterReducer,0)
+    console.log(state);
     return (
-        
         <div>
-         <button onClick={() => { setstate(state + 1) }}>Reset Value</button>   
+         <button onClick={() => {dispatch('reset')}}>Reset Value</button>   
         </div>
     )
 }
