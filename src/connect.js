@@ -2,11 +2,11 @@ import React , {useState}from 'react'
 import App from "./App";
 import counterContext from './counterContext';
 const Connect = () => {
-  const [count, setcount] = useState({
+  const  countContext = useState({
     name:"ali",roll:3456
 })
   return (
-    <counterContext.Provider value={count}>
+    <counterContext.Provider value={countContext}>
       <App />
     </counterContext.Provider>
   )
