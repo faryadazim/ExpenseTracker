@@ -1,34 +1,48 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const MultipleReturn = () => {
+  const url = "fakeapi.com";
   // we can return multiple different thing its depend on conditoins
-  const [loading, setloading] = useState(false);
-  if (loading) {
+  const [isLoading, setIsloading] = useState(true);
+  const [isError, setIsError] = useState(false);
+  const [user, setUser] = useState("User Default");
+
+  useEffect(() => {
+   fetch(url)
+     .then((res) => {
+       if (res.status>=200 && res.status<=299) {
+          res.json()
+       } else {
+         setIsError(true)
+         setIsloading(false)
+         throw new Error (res.statusText)
+       }
+      
+     })
+     .then((user) => {
+        setUser(user.name)
+        setIsloading(false)
+      })
+      .catch((error)=>{console.log('Error : ' , error);});
+  }, []);
+
+  if (isLoading) {
     return (
       <>
         <h3> Loading </h3>
-        <button
-          className="btn btn-sm btn-success text-light"
-          onClick={() => {
-            setloading(!loading);
-          }}
-        >
-          Done Loading
-        </button>
+      </>
+    );
+  }
+  if (isError) {
+    return (
+      <>
+        <h3> Error </h3>
       </>
     );
   }
   return (
     <>
-      <h3> Multiple Return </h3>
-      <button
-        className="btn btn-sm btn-success text-light"
-        onClick={() => {
-          setloading(!loading);
-        }}
-      >
-        Done Loading
-      </button>
+      <h3> {user} </h3>
     </>
   );
 };
