@@ -5,7 +5,9 @@ import './App.css'
 // import App from "./2-useState/App";
 // import App from "./3-useEffect/App";
 // import App from "./4-Conditional-Rendering/App";
-import App from "./5-Forms-InputControl/App";
+// import App from "./5-Forms-InputControl/App";
+// import App from "./6-useRef/App";
+import App from "./7-useReducer/App";
 
 ReactDOM.render(
   <React.StrictMode>
