@@ -1,11 +1,18 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 
-const modal = () => {
-    return (
-        <>
-            i'm Model
-        </>
-    )
-}
+const Modal = ({ showModelContent, closeModal }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      closeModal();
+    }, 5000);
+  });
+  return (
+    <>
+      <p className="form-control w-50 bg-warning text-secondary text-center ">
+        {showModelContent}
+      </p>
+    </>
+  );
+};
 
-export default modal
+export default Modal
