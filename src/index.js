@@ -7,8 +7,9 @@ import "./App.css";
 // import App from "./4-Conditional-Rendering/App";
 // import App from "./5-Forms-InputControl/App";
 // import App from "./6-useRef/App";
-import App from "./7-useReducer/App";
+// import App from "./7-useReducer/App";
 // import App from "./8-Prop-Drilling/App";
+import App from "./9-ContextAPI/App";
 
 ReactDOM.render(
   <React.StrictMode>
