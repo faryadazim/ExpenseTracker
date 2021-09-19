@@ -1,0 +1,54 @@
+body {
+  background: #0d6efd;
+  margin: 45px 68px;
+}
+* {
+  color: white;
+}
+.bg-for-nab {
+  background: #dc3545;
+  transition: all 0.25s ease-out;
+}
+.bg-for-nab:hover {
+  background: #ffc107;
+}
+.bg-for-na {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+/* ReactBasic */
+
+/* .new {
+  height: 300px;
+  width: 300px;
+  background-color: rosybrown;
+}
+.new1 {
+  height: 200px;
+  width: 300px;
+  background-color: rgb(61, 168, 230);
+}
+.new2 {
+  height: 350px;
+  width: 300px;
+  background-color: rgb(190, 207, 29);
+}
+.new3 {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(145, 188, 143);
+}
+.new4 {
+  height: 320px;
+  width: 300px;
+  background-color: rgb(214, 38, 38);
+}
+.boc {
+  display: flex;
+  height: 1000px;
+  align-items: flex-start;
+  align-self: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+} */
