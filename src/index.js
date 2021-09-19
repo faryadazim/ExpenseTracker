@@ -9,7 +9,10 @@ import "./App.css";
 // import App from "./6-useRef/App";
 // import App from "./7-useReducer/App";
 // import App from "./8-Prop-Drilling/App";
-import App from "./9-ContextAPI/App";
+// import App from "./9-ContextAPI/App";
+// import App from "./10-Custom Hook/App";
+// import App from "./11-PropsTypes/App";
+import App from "./12-React-Router/Index";
 
 ReactDOM.render(
   <React.StrictMode>

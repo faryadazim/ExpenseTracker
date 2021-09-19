@@ -1,14 +1,23 @@
-body{
-  background:#0d6efd;
-  margin:  45px 68px;
+body {
+  background: #0d6efd;
+  margin: 45px 68px;
 }
-*{
-  color:white
+* {
+  color: white;
 }
-
+.bg-for-nab {
+  background: #dc3545;
+  transition: all 0.25s ease-out;
+}
+.bg-for-nab:hover {
+  background: #ffc107;
+}
+.bg-for-na {
+  text-decoration: none !important;
+  color: white !important;
+}
 
 /* ReactBasic */
-
 
 /* .new {
   height: 300px;
