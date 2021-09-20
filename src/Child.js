@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { GlobalStore } from "./GlobalContext";
 
 const Child = () => {
+  const [amount, setAmount] = useState();
+  const [desc, setDesc] = useState();
+  const context = useContext(GlobalStore);
+  const Store = context.state;
+  // context.AddFunc();
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const transactionObj = { amount, desc };
+    context.AddFunc(transactionObj);
+    setAmount("");
+    setDesc("");
+  };
   return (
     <>
       <div className="container text-center bg-info">
@@ -21,35 +34,44 @@ const Child = () => {
         <div className="transaction-history my-4">
           <h3>Histrory</h3>
           <hr />
-          <div className="transaction-list">
-            <ul>
-              <li className="d-flex ">
-                <span>caash</span>
-                <span>500$</span>
-              </li>
-              <li>
-                <span>salary</span>
-                <span>500$</span>
-              </li>
-              <li>
-                <span>used</span>
-                <span>500$</span>
-              </li>
+          <div className="transaction-list d-flex ">
+            <ul className="mx-auto ">
+              {Store.map((item, index) => {
+                return (
+                  <li
+                    className="d-flex justify-content-center w-100 my-1 bg-warning "
+                    key={index}
+                  >
+                    <span className="me-5 px-5 ">{item.desc}</span>
+                    <span className="ms-5 px-5 my-1">{item.amount}$</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
         <div className="new-transaction my-2">
           <h3>Add New Transaction</h3>
           <hr />
-          <form transaction>
+          <form transaction onSubmit={(e) => submitHandler(e)}>
             <label htmlFor="">
               Enter Disccription <br />
-              <input type="text" className="form-control w-100" />
+              <input
+                type="text"
+                className="form-control w-100"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+              />
             </label>
             <br />
             <label htmlFor="">
               Enter Amount <br />
-              <input type="text" className="form-control w-100" />
+              <input
+                type="text"
+                className="form-control w-100"
+                value={desc}
+                onChange={(e) => setDesc(e.target.value)}
+              />
             </label>
             <br />
             <button type="submit" className="btn btn-primary mt-3">
