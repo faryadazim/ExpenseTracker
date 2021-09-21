@@ -42,7 +42,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 650px;
   padding: 14px;
 }
 .main-container {
@@ -51,7 +51,7 @@ body {
   background-color: #fff;
   width: 385px;
   height: 595px;
-  margin: auto;
+  margin: 45px;
   padding: 8px 12px;
 }
 .header h4 {
