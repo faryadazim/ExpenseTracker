@@ -5,7 +5,7 @@ const TransactionHistroty = () => {
   return (
     <>
       <div className="transaction-container">
-        <h1>Transactions</h1>
+        <h1>Transactions History</h1>
         <ul className="unorderList">
           <Transaction />
         </ul>

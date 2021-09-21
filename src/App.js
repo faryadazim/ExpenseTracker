@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
 import Main from "./Main";
+import GlobalProvider from "./store/GlobalContext";
 
 const App = () => {
   return (
-    <div>
+    <GlobalProvider>
       <Main />
-    </div>
+    </GlobalProvider>
   );
 };
 

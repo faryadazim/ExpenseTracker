@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "./Header.js";
-import Balance from "./Balance.js";
-import AcountSummary from "./AcountSummary.js";
-import TransactionHistroty from "./TransactionHistroty.js";
-import AddTransaction from "./AddTransaction.js";
+import Header from "./components/Header";
+import Balance from "./components/Balance.js";
+import AcountSummary from "./components/AcountSummary.js";
+import TransactionHistroty from "./components/TransactionHistroty.js";
+import AddTransaction from "./components/AddTransaction.js";
 
 const Main = () => {
   return (
@@ -15,7 +15,6 @@ const Main = () => {
         <TransactionHistroty />
         <AddTransaction />
       </div>
-      <p> COPYRIGHT ©2020 XARB. All Rights Reserved</p>
     </div>
   );
 };
