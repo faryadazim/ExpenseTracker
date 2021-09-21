@@ -1,12 +1,12 @@
 import React from "react";
-import Child from "./Child";
-import { GlobalProvider } from "./GlobalContext";
+import "./App.css";
+import Main from "./Main";
 
 const App = () => {
   return (
-    <GlobalProvider>
-      <Child />
-    </GlobalProvider>
+    <div>
+      <Main />
+    </div>
   );
 };
 

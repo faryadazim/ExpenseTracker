@@ -1,3 +1,201 @@
-ul {
-  flex-direction: column !important;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: sans-serif; */
 }
+
+body {
+  height: 100vh;
+  background-color: rgb(214, 239, 248);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 3px;
+}
+::-webkit-scrollbar-button {
+  background-color: rgb(235, 235, 235);
+}
+::-webkit-scrollbar-track {
+  background-color: #646464;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgb(224, 224, 224);
+}
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: rgb(194, 193, 193);
+  border-radius: 0px;
+}
+
+::-webkit-resizer {
+  background-color: #666;
+}
+/* Scrol bar  */
+
+.main-body {
+  display: flex;
+  background-color: rgb(219, 219, 219);
+  /* background-color: rgb(204, 241, 255); */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 14px;
+}
+.main-container {
+  box-shadow: 8px 8px rgb(170, 170, 170);
+  /* box-shadow: 8px 8px rgb(168, 226, 247); */
+  background-color: #fff;
+  width: 385px;
+  height: 595px;
+  margin: auto;
+  padding: 8px 12px;
+}
+.header h4 {
+  letter-spacing: 7px;
+  text-align: center;
+  /* font-family: sans-serif; */
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 12px;
+  margin-top: 4px;
+  color: rgb(102, 101, 101);
+  user-select: none;
+}
+.balanceComponent {
+  background: rgb(245, 245, 245);
+  padding: 4px;
+  margin: 6px auto;
+  text-align: center;
+}
+.balanceComponent h4 {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 2px auto;
+  user-select: none;
+}
+.balanceComponent h2 {
+  margin: 2px auto;
+  font-size: 28px;
+  font-weight: 500;
+  user-select: none;
+  letter-spacing: 2.4px;
+}
+.transaction-summary {
+  background: #000;
+  display: flex;
+}
+.boxes h6 {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  user-select: none;
+}
+.boxes p {
+  margin-bottom: 0;
+  font-size: 19px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.income-box {
+  background-color: rgb(235, 235, 235);
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  user-select: none;
+}
+.Expense-box {
+  background-color: rgb(224, 224, 224);
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  user-select: none;
+}
+
+.transaction-container h1 {
+  text-align: center;
+  /* font-family: sans-serif; */
+  font-weight: 600;
+  font-size: 20px;
+  padding: 8px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin: 4px 65px;
+  margin-bottom: 10px;
+  color: rgb(102, 101, 101);
+  border-bottom: 2px solid rgb(182, 180, 180);
+  user-select: none;
+}
+
+.unorderList {
+  background-color: rgb(235, 235, 235);
+  border: 4px solid rgb(235, 235, 235);
+  list-style: none;
+  padding: 0px 0px;
+  height: 150px;
+  overflow-y: auto;
+  user-select: none;
+  padding-bottom: 14px !important;
+  margin-bottom: 0;
+}
+.unorderList li {
+  display: flex;
+  background-color: #fff;
+  margin: 5px 10px;
+  padding: 8px 40px !important;
+  justify-content: space-between;
+  user-select: none;
+}
+.unorderList button {
+  display: flex;
+  text-align: center;
+  background-color: #dc3545;
+  color: #fff; /* margin: 5px 10px; */
+  padding: 8px 40px !important;
+  justify-content: space-between;
+  width: 95.3%;
+  display: block;
+  margin: 5px 10px;
+  border: none;
+  user-select: none;
+}
+
+#DeleteButton {
+  display: none;
+  user-select: none;
+}
+#TransactionListItem {
+  display: flex;
+  user-select: none;
+}
+
+.transaction-list-container:hover > #DeleteButton {
+  display: block;
+}
+.transaction-list-container:hover > #TransactionListItem {
+  display: none;
+}
+.transaction-container2 h1 {
+  text-align: center;
+  /* font-family: sans-serif; */
+  font-weight: 600;
+  font-size: 20px;
+  padding: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 4px 20px;
+  color: rgb(102, 101, 101);
+  border-bottom: 2px solid rgb(182, 180, 180);
+  user-select: none;
+}
+
+/* form  */
