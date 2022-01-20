@@ -1,3 +1,5 @@
+// here we only describe actions actually varlue store there in GlobalContext
+
 export const AppReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TRANSACTION":

@@ -3,7 +3,7 @@ import { AppReducer } from "./AppReducer";
 
 // Creating Store throgh contextAPI
 const InitialState = [];
-export const GlobalContent = createContext("InitialState");
+export const GlobalContent = createContext();
 
 // Creating React Funcion As GlobalProvider
 const GlobalProvider = ({ children }) => {
